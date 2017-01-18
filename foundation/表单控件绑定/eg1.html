@@ -1,0 +1,80 @@
+<div id="app">
+
+
+
+    <h2>表单控件绑定</h2>
+    <div>
+        <h3>文本:</h3>
+        <p>单行文本:</p>
+        <input v-model="message1" placeholder="edit me">
+        <p>Message is: {{ message1 }}</p>
+
+        <p>多行文本:</p>
+        <textarea v-model.trim="message2" placeholder="add multiple lines"></textarea>
+        <br>
+        <span>Multiline message is:</span>
+        <p style="white-space: pre">{{ message2 }}</p>
+    </div>
+
+
+    <div>
+        <h3>复选框:</h3>
+        <p>单个复选框:</P>
+        <input type="checkbox" id="checkbox" v-model="checked">
+        <label for="checkbox">{{ checked }}</label>
+    </div>
+
+    <div>
+        <p>多个复选框:</P>
+        <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+        <label for="jack">Jack</label>
+        <input type="checkbox" id="john" value="John" v-model="checkedNames">
+        <label for="john">John</label>
+        <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+        <label for="mike">Mike</label>
+        <br>
+        <span>Checked names: {{ checkedNames }}</span>
+    </div>
+
+    <div>
+        <h3>单选按钮:</h3>
+        <input type="radio" id="one" value="One" v-model="picked">
+        <label for="one">One</label>
+        <br>
+        <input type="radio" id="two" value="Two" v-model="picked">
+        <label for="two">Two</label>
+        <p>Picked: {{ picked }} </span>
+    </div>
+
+    <div>
+        <h3>选择列表</h3>
+        <p>单选列表:</p>
+        <select v-model="selected1">
+          <option value="No">Are you my angel?</option>
+          <option value="Never">Will you end my sorrow?</option>
+          <option value="Not a second">Have I feel regret?</option>
+        </select>
+        <span>Answer: {{ selected1 }} </span>
+        <p>多选列表:</p>
+        <select v-model="selected2" multiple>
+          <option value="cute">cute</option>
+          <option value="tough">tough</option>
+          <option value="optimistic">optimistic</option>
+          <option value="thoughtful">thoughtful</option>
+        </select>
+        <p>Selected: {{ selected2 }} </p>
+
+
+        <p>动态选项（用v-for渲染）</p>
+        <select v-model="selected3">
+    <option v-for="li in list" v-bind:value="li.value">
+      {{ li.text }}
+    </option>
+  </select>
+        <p>Answer: {{ selected3 }}</p>
+    </div>
+
+
+</div>
+<script src="../../vue.js"></script>
+<script src="eg1.js"></script>
