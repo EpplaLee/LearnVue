@@ -1,0 +1,11 @@
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="./v-bind.css"/>
+<div id="app">
+  <div id="block" v-bind:style="{ width: width + 'px', height: height + 'px'}">
+  </div>
+  <input v-model="height">
+  <input v-model="width">
+</div>  
+
+<script src="../vue.js"></script>
+<script src="./v-bind.js"></script>
