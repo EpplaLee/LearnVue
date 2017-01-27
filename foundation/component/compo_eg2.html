@@ -1,6 +1,7 @@
 <div id="eg2">
   <p>{{ total }}</p>
-  <button-counter v-on:increment="incrementTotal"></button-counter>
+  <!-- 此处的‘v-on:increment’表明:父组件可以在使用子组件的地方直接用 v-on 来监听子组件触发的事件。 -->
+  <button-counter v-on:increment="incrementTotal"></button-counter>  
   <button-counter v-on:increment="incrementTotal"></button-counter>
 </div>
 

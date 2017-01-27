@@ -1,0 +1,50 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>A simple editable table</title>
+        <link rel="stylesheet" href="editable.css"/>
+    </head>
+    <body>
+        <div id="app">
+            <fieldset>
+                <legend>
+                    Add a new item
+                </legend>
+                <div class="form-group">
+                    <label>Name:</label>
+                    <input type="text" v-model="newArtist.name"/>
+                </div>
+                <div class="form-group">
+                    <label>favoriteSong:</label>
+                    <input type="text" v-model="newArtist.favoriteSong"/>
+                </div>
+                <div class="form-group">
+                    <label>style:</label>
+                    <input type="text" v-model="newArtist.style"/>
+                </div>
+                <button v-on:click="addArtist">AddArtist</button>
+            </fieldset>
+            <table>
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>FavoriteSong</th>
+                    <th>Style</th>
+                    <th>Operation</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(artist,index) in artists">
+                        <td>{{ artist.name }}</td>
+                        <td>{{ artist.favoriteSong }}</td>
+                        <td>{{ artist.style }}</td>    
+                        <td><button v-on:click="delArtist">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+    <script src="../../vue.js"></script>
+    <script src="editable.js"></script>
+</html>
