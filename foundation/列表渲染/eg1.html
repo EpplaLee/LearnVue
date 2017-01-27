@@ -1,9 +1,9 @@
 <meta charset="UTF-8">
 <ul id="example-2">
-  <li v-for="(item, index) in items">
-    {{ parentMessage }} - {{ index }} - {{ item.message }}
+  <li v-for="(value,key,index) in items">
+   {{ index + 1 }}.{{ key }} : {{ value }}
   </li>
 </ul>
 
-<script src="../../vue.js"></script>
+<script src="../../../vue.js"></script>
 <script src="eg1.js"></script>

@@ -1,10 +1,10 @@
 var example2 = new Vue({
   el: '#example-2',
   data: {
-    parentMessage: 'Parent',
-    items: [
-      { message: 'Foo' },
-      { message: 'Bar' }
-    ]
+      items: {
+        firstName: "Magic",
+        lastName: "Conch",
+        age: 30
+      }
   }
 })
