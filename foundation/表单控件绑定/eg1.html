@@ -66,15 +66,25 @@
 
 
         <p>动态选项（用v-for渲染）</p>
-        <select v-model="selected3">
-    <option v-for="li in list" v-bind:value="li.value">
-      {{ li.text }}
-    </option>
-  </select>
+            <select v-model="selected3">
+             <option v-for="li in list" v-bind:value="li.value">
+                {{ li.text }}
+             </option>
+            </select>
         <p>Answer: {{ selected3 }}</p>
+    </div>
+    
+    <div>
+        <h3>动态渲染option列表:</h3>
+        <select v-model="selected4">
+            <option v-for="option in options" v-bind:value="option.value">
+                {{ option.value }}.{{ option.text }}
+            </option>
+        </select>
+        <p>选择了选项: {{ selected4 }}</p>
     </div>
 
 
 </div>
-<script src="../../vue.js"></script>
+<script src="../../../vue.js"></script>
 <script src="eg1.js"></script>
