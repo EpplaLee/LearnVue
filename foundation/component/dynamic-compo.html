@@ -1,0 +1,14 @@
+<meta charset="UTF-8"/>
+<div id="app">
+    <h3>Where are you right now?</h3>
+    <my-position v-bind:is="currentPosition"></my-position>
+    <input type="radio" id="home" value="home" v-model="currentPosition">
+    <label for="home">home</label>
+    <input type="radio" id="company" value="company" v-model="currentPosition">
+    <label for="company">company</label>
+    <input type="radio" id="school" value="school" v-model="currentPosition">
+    <label for="school">school</label>
+</div>
+
+<script src="../../../vue.js"></script>
+<script src="dynamic-compo.js"></script>
