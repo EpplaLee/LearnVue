@@ -1,0 +1,31 @@
+<template id='child-compo'>
+ <div class="container">
+  <header>
+    <slot name="header"></slot>
+  </header>
+  <main>
+    <slot></slot>
+  </main>
+  <footer>
+    <slot name="footer"></slot>
+  </footer>
+</div>
+</template>
+
+<template id='parent-compo'>
+  <div>
+  <h1>I'm the parent title</h1>
+  <child-compo>
+        <h1 slot="header">Here might be a page title</h1>
+        <p>A paragraph for the main content.</p>
+        <p>And another one.</p>
+        <p slot="footer">Here's some contact info</p>
+  </child-compo>
+</div>
+</template>
+
+<div id="example">
+    <parent-compo></parent-compo>
+</div>
+<script src="../../../vue.js"></script>
+<script src="slot_eg2.js"></script>

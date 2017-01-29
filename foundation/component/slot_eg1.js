@@ -1,3 +1,4 @@
+// 创建组件新方式get
 Vue.component('parent-compo',{
     template: '#parent-compo'
 });
