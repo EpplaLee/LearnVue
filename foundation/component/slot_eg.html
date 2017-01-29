@@ -1,0 +1,27 @@
+<div id="example">
+    <parent-compo>
+    </parent-compo>
+    <child-compo>
+    </child-compo>
+</div>
+
+<template id="parent-compo">
+    <div>
+        <h1>I'm the parent title</h1>
+        <child-compo>
+                我是父组件的内容，写在子组件的标签内，将会自动传入子组件模版中的slot.
+        </child-compo>
+    </div>
+</template>
+
+<template id="child-compo">
+    <div>
+        <h2>I'm the child title</h2>
+        <slot>
+            没有slot注入时，这段文字才会被显示.
+        </slot>
+    </div>
+</template>
+
+<script src="../../../vue.js"></script>
+<script src="slot_eg.js"></script>
