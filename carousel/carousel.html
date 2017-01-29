@@ -1,0 +1,18 @@
+<meta charset="UTF-8"/>
+<link rel="stylesheet" type="text/css" href="carousel.css"/>
+
+<fieldset>
+    <legend>鬼畜及鬼畜素材</legend>
+    <div id="app">
+        <div class="video-area">
+            <div v-for="item in pages[count].items" class="video-unit">
+                <div class="video-pic">
+                    <img v-bind:src="item.src" v-bind:alt="item.name">
+                </div>
+                <a href="#">{{ item.name }}</a>
+            </div>
+        </div>
+    </div>
+</fieldset>
+<script src="../../vue.js"></script>
+<script src="carousel.js"></script>

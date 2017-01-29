@@ -1,11 +1,4 @@
-<div id="app">
-    <p>
-        {{ pages[1].items[3].name }}
-    </p>
-</div>
-
-<script src="../../vue.js"></script>
-<script>
+    var count = 0;
     var vm = new Vue({
         el: '#app',
         data:{
@@ -94,9 +87,19 @@
                           ]}
 
 
-            ],
-            count: 0
+            ]
+        },
+        computed: {
+            count: function(){
+                return count;
+            }
+        },
+        mounted : function(){
+            setInterval(function(){
+                console.log(count);
+                if(count === 3) count=0;
+                else count +=1;
+            },3000);
         }
 
     })
-</script>
