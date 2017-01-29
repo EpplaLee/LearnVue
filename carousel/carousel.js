@@ -1,4 +1,4 @@
-    var count = 0;
+
     var vm = new Vue({
         el: '#app',
         data:{
@@ -32,10 +32,6 @@
                         {
                             name: "FAMAS",
                             src: "./images/FAMAS.jpg"
-                        },
-                        {
-                            name: "HK416",
-                            src: "./images/HK416.jpg"
                         },
                         {
                             name: "HK416",
@@ -85,20 +81,35 @@
                                   src: "./images/李·英菲尔德.jpg"
                               }
                           ]}
+            ],
+            count: 0,
+            itemOnShow:  [
+                    {
+                        name: "化物语",
+                        src: "./images/化物语.jpg"
+                    },
+                    {
+                        name: "恋物语",
+                        src: "./images/恋物语.jpg"
+                    },
+                    {
+                        name: "凭物语",
+                        src: "./images/凭物语.jpg"
+                    },
+                    {
+                        name: "伪物语",
+                        src: "./images/伪物语.jpg"
+                    }
 
+                ]
 
-            ]
-        },
-        computed: {
-            count: function(){
-                return count;
-            }
-        },
+            },
         mounted : function(){
             setInterval(function(){
-                console.log(count);
-                if(count === 3) count=0;
-                else count +=1;
+                console.log(vm.count);
+                if(vm.count === 3) vm.count=0;
+                else vm.count +=1;
+                vm.itemOnShow = vm.pages[vm.count].items;
             },3000);
         }
 
