@@ -1,0 +1,63 @@
+<div id="app">
+    <p>
+        {{ pages[1].items[3].name }}
+    </p>
+</div>
+
+<script src="../../vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data:{
+            pages: [
+                {
+                    items: [
+                    {
+                        name: "化物语",
+                        src: "./images/化物语.jpg"
+                    },
+                    {
+                        name: "恋物语",
+                        src: "./images/恋物语.jpg"
+                    },
+                    {
+                        name: "凭物语",
+                        src: "./images/凭物语.jpg"
+                    },
+                    {
+                        name: "伪物语",
+                        src: "./images/伪物语.jpg"
+                    }
+
+                ]},
+                {
+                    items: [
+                        {
+                            name: "SVD",
+                            src: "./images/SVD.jpg"
+                        },
+                        {
+                            name: "FAMAS",
+                            src: "./images/FAMAS.jpg"
+                        },
+                        {
+                            name: "HK416",
+                            src: "./images/HK416.jpg"
+                        },
+                        {
+                            name: "HK416",
+                            src: "./images/HK416.jpg"
+                        },
+                        {
+                            name: "FNC",
+                            src: "./images/FNC.jpg"
+                        }
+                            
+                  ]
+                }
+
+
+            ]
+        }
+    })
+</script>
