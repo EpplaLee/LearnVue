@@ -1,0 +1,9 @@
+<div id="v-model-example">
+  <p>{{ message }}</p>
+  <my-input
+    label="Message"
+    v-bind:prologue="message" v-on:input="message = arguments[0]"
+  ></my-input>
+</div>
+<script src="../../../vue.js"></script>
+<script src="compo_eg5.js"></script>
