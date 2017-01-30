@@ -2,6 +2,10 @@
     var vm = new Vue({
         el: '#app',
         data:{
+            actived: {
+                    class: 'selected'
+                    },
+            sleeping: {},
             pages: [
                 {
                     items: [
@@ -111,6 +115,18 @@
                 else vm.count +=1;
                 vm.itemOnShow = vm.pages[vm.count].items;
             },3000);
+        },
+        methods: {
+            turnLeft: function(){
+                if(this.count===0) this.count=3;
+                else this.count -= 1;
+                this.itemOnShow = this.pages[this.count].items;
+            },
+            turnRight: function(){
+                if(this.count===3) this.count=0;
+                else this.count += 1;
+                this.itemOnShow = this.pages[this.count].items;
+            }
         }
 
     })

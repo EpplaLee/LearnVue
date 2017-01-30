@@ -1,9 +1,22 @@
 <meta charset="UTF-8"/>
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="carousel.css"/>
 
-<fieldset>
+<fieldset id="app">
     <legend>鬼畜及鬼畜素材</legend>
-    <div id="app">
+    <div id = "head">
+      <button type="button" class="btn btn-default btn-lg" v-on:click="turnLeft">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </button>
+      <button type="button" class="btn btn-default btn-lg" v-on:click="turnRight">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </button>
+      <span id="page-4" class = "s-circle" v-bind:class="[count===3?actived.class:sleeping]"></span>
+      <span id="page-3" class = "s-circle" v-bind:class="[count===2?actived.class:sleeping]"></span>
+      <span id="page-2" class = "s-circle" v-bind:class="[count===1?actived.class:sleeping]"></span>
+      <span id="page-1" class = "s-circle" v-bind:class="[count===0?actived.class:sleeping]"></span>
+    </div>
+    <div>
         <div class="video-area">
             <div v-for="item in itemOnShow" class="video-unit">
                 <div class="video-pic">
