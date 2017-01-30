@@ -126,6 +126,14 @@
                 if(this.count===3) this.count=0;
                 else this.count += 1;
                 this.itemOnShow = this.pages[this.count].items;
+            },
+            turnPage: function(){
+                if(event.target.getAttribute("class")==="s-circle"){
+                var pageNum = event.target.getAttribute("id").match(/\d/);
+                this.count = parseInt(pageNum);
+                this.itemOnShow = this.pages[this.count].items;
+                }
+  
             }
         }
 
