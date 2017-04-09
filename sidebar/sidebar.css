@@ -1,0 +1,70 @@
+#main {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+#nav {
+}
+
+#body {
+    margin-top: -15px;
+    display: flex; 
+}
+
+/*----------------------------------侧边栏--------------------------------*/
+#sidebar-trigger {
+    align-self: center;
+    text-align: center;
+    transform: translateY(-70px);
+    height: 37px;
+    width: 40px;
+    background-color: white;
+    border: solid 2px black;
+    border-radius: 0;
+
+}
+#sidebar {
+    width: 400px;
+    color: white;
+    background-color: black;
+}
+#introduction {
+    position: relative;
+    top: 50%;
+    transform: translateY(-80%);
+    margin: auto;
+    text-align: center;
+}
+#name {
+    font-family: "Georgia";
+}
+#discription {
+    font-family: "Trebuchet MS";
+}
+#avatar > img {
+    border-radius: 50%;
+    width: 150px;
+}
+
+a > .icon {
+    font-size: 20px !important;
+    color: lightgray !important;
+}
+
+
+
+
+.hide {
+    display: none;
+}
+
+
+/*------------------------------------正文部分---------------------------------*/
+#essays {
+    width: 60%;
+    height: 100%;
+    margin: 20px auto;
+}
+
+

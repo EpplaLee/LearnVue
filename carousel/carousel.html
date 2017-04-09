@@ -1,4 +1,5 @@
 <meta charset="UTF-8"/>
+<link href="https://unpkg.com/animate.css@3.5.1/animate.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="carousel.css"/>
 
@@ -17,6 +18,9 @@
       <span id="page-0" class = "s-circle" v-bind:class="[count===0?actived.class:sleeping]"></span>
     </div>
     <div>
+        <transition
+        name="custom-classes-transition"
+        leave-active-class="animated bounceOutRight">
         <div class="video-area">
             <div v-for="item in itemOnShow" class="video-unit">
                 <div class="video-pic">
@@ -25,6 +29,7 @@
                 <a href="#">{{ item.name }}</a>
             </div>
         </div>
+        </transition>
     </div>
 </fieldset>
 <script src="../../vue.js"></script>

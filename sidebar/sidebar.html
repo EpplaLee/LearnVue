@@ -1,0 +1,61 @@
+<!DOCTYPE>
+<head>
+    <meta charset="UTF-8"/>
+    <title>DawningLee</title>
+    <link rel="stylesheet" type="text/css" href="./semantic/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="sidebar.css">
+</head>
+<body>
+    <div id="main">
+        <div class="ui inverted pointing menu" id="nav">
+            <a class="item  active">Home </a>
+            <a class="item">Messages </a>
+            <a class="item">Friends </a>
+            <div class="right menu">
+                <div class="item">
+                    <div class="ui transparent icon input">
+                    <input type="text" placeholder="Search...">
+                    <button class="ui inverted basic button">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="body">
+            <nav id="sidebar" v-bind:class="{ hide: isHidden }">
+                <div id="introduction">
+                    <div id="avatar">
+                        <img src="./imgs/sushi.jpg" alt="毒菇女王——苏西">
+                    </div>
+                    <h2 id="name">Desperado</h2>
+                    <p id="discription">I saw the light</p>
+                    <div id="links">
+                        <a href="#"><i class="github icon"></i></a>
+                        <a href="#"><i class="Weibo icon"></i></a>
+                        <a href="#"><i class="Book icon"></i></a>
+                    </div>
+                </div>
+            </nav>
+            <button v-on:click="toggleSidebar" class="ui icon button" id="sidebar-trigger"><i class="align justify icon"></i></button>
+            <div id="essays">
+                <div class="essay ui raised segment">
+                    <h3 class="title">赤壁赋</h3>
+                    <p class="content">客亦知夫水与月乎？逝者如斯，而未尝往也;盈虚者如彼，而卒莫消长(zhǎng)也。盖将自其变者而观之，则天地曾不能以一瞬；自其不变者而观之，则物与我皆无尽也，而又何羡乎？且夫天地之间，物各有主，苟非吾之所有，虽一毫而莫取。惟江上之清风，与山间之明月, 耳得之而为声，目遇之而成色, 取之无禁，用之不竭，是造物者之无尽藏(zàng)也，而吾与子之所共适。</p>
+                </div>
+                <div class="essay ui raised segment">
+                    <h3 class="title">四重奏</h3>
+                    <p class="content">和你在一起我的心中就会混集着两种情绪，快乐又悲伤，欢喜又寂寞，温柔又冷漠，深爱又徒劳。爱到深处，就觉得徒劳，即使交谈，或是触摸，所到之处都空无一物，那我究竟要从什么手里夺走你好呢。</p>
+                </div>
+                <div class="essay ui raised segment">
+                    <h3 class="title">爱你就像爱生命</h3>
+                    <p class="content">每当想起你，我这张丑脸就泛起微笑。</p>
+                </div>
+            </div>
+            <div id="side-index">
+            
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./semantic/semantic.min.css"></script>
+<script src="../../vue.js"></script>
+<script src="sidebar.js"></script>
