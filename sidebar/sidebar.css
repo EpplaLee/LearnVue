@@ -8,6 +8,7 @@
 }
 
 #body {
+    height: 94vh;
     margin-top: -15px;
     display: flex; 
 }
@@ -28,13 +29,41 @@
     width: 400px;
     color: white;
     background-color: black;
+    animation-name: slide;
+    animation-duration: .5s;
 }
+
+@keyframes slide {
+    from { 
+        margin-left: -400px;
+     }
+    to { 
+        margin-left: 0;
+        }
+}
+
+
+.slide-enter-active, .slide-leave-active {
+    transition: margin-left .5s;
+}
+.slide-enter, .slide-leave-active {
+    margin-left: -400px;
+}
+
+
 #introduction {
     position: relative;
     top: 50%;
     transform: translateY(-80%);
     margin: auto;
     text-align: center;
+    animation-name: fade;
+    animation-duration: .6s;
+}
+@keyframes fade {
+    from { opacity: 0}
+    50% { opacity: 0}
+    to { opacity: 1}
 }
 #name {
     font-family: "Georgia";
@@ -51,9 +80,6 @@ a > .icon {
     font-size: 20px !important;
     color: lightgray !important;
 }
-
-
-
 
 .hide {
     display: none;

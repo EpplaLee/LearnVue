@@ -21,7 +21,8 @@
             </div>
         </div>
         <div id="body">
-            <nav id="sidebar" v-bind:class="{ hide: isHidden }">
+            <transition name="slide">
+            <nav id="sidebar" v-if="show"> 
                 <div id="introduction">
                     <div id="avatar">
                         <img src="./imgs/sushi.jpg" alt="毒菇女王——苏西">
@@ -35,7 +36,8 @@
                     </div>
                 </div>
             </nav>
-            <button v-on:click="toggleSidebar" class="ui icon button" id="sidebar-trigger"><i class="align justify icon"></i></button>
+            </transition>
+            <button v-on:click="show = !show" class="ui icon button" id="sidebar-trigger"><i class="align justify icon"></i></button>
             <div id="essays">
                 <div class="essay ui raised segment">
                     <h3 class="title">赤壁赋</h3>
