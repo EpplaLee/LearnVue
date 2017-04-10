@@ -1,0 +1,66 @@
+#main {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+
+#nav {
+    height: 5vh;
+}
+
+#nav > .item {
+    text-align: center;
+    padding-left: 3px;
+    width: 60px;
+    font-size: 8px;
+}
+.item>.input input {
+    width: 100px !important;
+}
+.item>.input button {
+    width: 60px;
+    font-size: 10px;
+    padding-left: 12px;
+}
+
+#sidebar {
+    margin-top: -15px;
+    padding-top: 20px;
+    height: 28vh;
+    color: white;
+    background-color: black;
+
+}
+
+#introduction {
+    text-align: center;
+}
+
+#avatar > img {
+    border-radius: 50%;
+    width: 120px;
+}
+
+#name {
+    margin-top: 10px;
+    font-family: "Georgia";
+}
+#discription {
+    font-family: "Trebuchet MS";
+}
+
+a > .icon {
+    font-size: 20px !important;
+    color: lightgray !important;
+}
+
+#sidebar-trigger {
+    display: none;
+}
+
+#essays {
+    width: 95%;
+    height: 100%;
+    margin: 10px;
+}
