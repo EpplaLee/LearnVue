@@ -1,6 +1,7 @@
 var sidebar = new Vue({
-    el: '#body',
+    el: '#main',
     data: {
-        show: true
+        showSidebar: true,
+        showMenu: false
     }
 });

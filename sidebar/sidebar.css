@@ -3,14 +3,26 @@
     min-height: 100vh;
     flex-direction: column;
 }
-
 #nav {
+    display: flex;
+    flex-direction: row;
+    height: 6vh;
+}
+#row-menu {
+    display: flex;
+    flex-direction: row;
 }
 
 #body {
+    display: flex;
     height: 94vh;
     margin-top: -15px;
-    display: flex; 
+    display: row; 
+}
+
+
+#dropdown-menu {
+    display: none;
 }
 
 /*----------------------------------侧边栏--------------------------------*/

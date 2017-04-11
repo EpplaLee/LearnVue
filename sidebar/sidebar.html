@@ -7,11 +7,21 @@
     <link rel="stylesheet" type="text/css" media="(max-width: 500px)" href="nosidebar.css">
 </head>
 <body>
-    <div id="main">
-        <div class="ui inverted pointing menu" id="nav">
+    <div id="main" v-on:click="showMenu = false">
+        <div class="ui inverted pointing menu" id="nav" v-on:click="showMenu = true">
+              <div class="ui dropdown icon item" id="dropdown-menu">
+                <i class="content icon" ></i>
+                <div class="menu" v-if="showMenu">
+                    <div class="item">Home</div>
+                    <div class="item">Messages</div>
+                    <div class="item">Friends</div>
+                </div>
+            </div>
+            <div id="row-menu">
             <a class="item  active">Home </a>
             <a class="item">Messages </a>
             <a class="item">Friends </a>
+            </div>
             <div class="right menu">
                 <div class="item">
                     <div class="ui transparent icon input">
@@ -23,7 +33,7 @@
         </div>
         <div id="body">
             <transition name="slide">
-            <nav id="sidebar" v-if="show"> 
+            <nav id="sidebar" v-if="showSidebar"> 
                 <div id="introduction">
                     <div id="avatar">
                         <img src="./imgs/sushi.jpg" alt="毒菇女王——苏西">
@@ -38,7 +48,7 @@
                 </div>
             </nav>
             </transition>
-            <button v-on:click="show = !show" class="ui icon button" id="sidebar-trigger"><i class="align justify icon"></i></button>
+            <button v-on:click="showSidebar = !showSidebar" class="ui icon button" id="sidebar-trigger"><i class="align justify icon"></i></button>
             <div id="essays">
                 <div class="essay ui vertical segment">
                     <h3 class="title">赤壁赋</h3>
@@ -59,6 +69,8 @@
         </div>
     </div>
 </body>
-<script src="./semantic/semantic.min.css"></script>
+<script src="./semantic/jquery-3.1.1.js"></script>
+<script src="./semantic/semantic.min.js"></script>
+
 <script src="../../vue.js"></script>
 <script src="sidebar.js"></script>

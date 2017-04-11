@@ -9,12 +9,18 @@
     height: 5vh;
 }
 
-#nav > .item {
-    text-align: center;
-    padding-left: 3px;
-    width: 60px;
-    font-size: 8px;
+#row-menu {
+    display: none;
 }
+
+/*#dropdown-menu {
+    cursor: pointer;
+    position: relative;
+    top: 80px;
+    left: -30px;
+
+}*/
+
 .item>.input input {
     width: 100px !important;
 }
@@ -25,6 +31,7 @@
 }
 
 #sidebar {
+    display: block;
     margin-top: -15px;
     padding-top: 20px;
     height: 28vh;
