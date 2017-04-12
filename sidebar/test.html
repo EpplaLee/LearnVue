@@ -1,25 +1,29 @@
-<style>
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s
-}
-.fade-enter, .fade-leave-active {
-  opacity: 0
-}
-</style>
-<div id="demo">
-  <button v-on:click="show = !show">
-    Toggle
-  </button>
-  <transition name="fade">
-    <p v-if="show">hello</p>
-  </transition>
-</div>
-<script src="../../vue.js"></script>
+ <link rel="stylesheet" type="text/css" href="./dist/semantic.min.css">
+ <style>
+   body {
+     background-color: black;
+   }
+ </style>
+        <div class="ui inverted pointing menu" id="nav">
+              <div class="ui dropdown item">
+                <i class="content icon"  id="dropdown-menu"></i>
+                <div class="menu">
+                    <div class="item">Home</div>
+                    <div class="item">Messages</div>
+                    <div class="item">Friends</div>
+                </div>
+            </div>
+            <div class="right menu">
+                <div class="item">
+                    <div class="ui transparent icon input">
+                    <input type="text" placeholder="Search...">
+                    <button class="ui inverted basic button">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+<script src="./dist/jquery-3.2.1.min.js" ></script>
+<script src="./dist/semantic.min.js"></script>
 <script>
-    new Vue({
-  el: '#demo',
-  data: {
-    show: true
-  }
-})
+    $('.ui.dropdown').dropdown();
 </script>

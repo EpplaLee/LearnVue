@@ -2,16 +2,16 @@
 <head>
     <meta charset="UTF-8"/>
     <title>DawningLee</title>
-    <link rel="stylesheet" type="text/css" href="./semantic/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="./dist/semantic.min.css">
     <link rel="stylesheet" type="text/css" media="(min-width: 500px)" href="sidebar.css">
     <link rel="stylesheet" type="text/css" media="(max-width: 500px)" href="nosidebar.css">
 </head>
 <body>
-    <div id="main" v-on:click="showMenu = false">
-        <div class="ui inverted pointing menu" id="nav" v-on:click="showMenu = true">
-              <div class="ui dropdown icon item" id="dropdown-menu">
+    <div id="main">
+        <div class="ui inverted pointing menu" id="nav">
+              <div class="ui dropdown item" id="dropdown-menu">
                 <i class="content icon" ></i>
-                <div class="menu" v-if="showMenu">
+                <div class="menu">
                     <div class="item">Home</div>
                     <div class="item">Messages</div>
                     <div class="item">Friends</div>
@@ -69,8 +69,10 @@
         </div>
     </div>
 </body>
-<script src="./semantic/jquery-3.1.1.js"></script>
-<script src="./semantic/semantic.min.js"></script>
-
+<script src="./dist/jquery-3.2.1.min.js" ></script>
+<script src="./dist/semantic.min.js"></script>
 <script src="../../vue.js"></script>
 <script src="sidebar.js"></script>
+<script>
+    $('.ui.dropdown').dropdown();
+</script>
